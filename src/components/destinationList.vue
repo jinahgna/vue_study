@@ -28,7 +28,7 @@ export default {
         const self = this;
         eventBus.$on('keyword', function (data) {
             const serviceKey = 'QBK%2FlSyT0QTA%2F9qIlwhVlxwr%2FGep9McM%2B5c2y5DdJE4RuhiylG9vaYGiYIqz%2F4UamfDAYURZ84JjA%2FlIq6spwA%3D%3D';
-            const mobileApp = 'vue_study01';
+            const mobileApp = 'vue_study';
             const numOfRows = '100';
             const contentTypeId = '12';
             const keyword = data;
