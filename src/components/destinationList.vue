@@ -1,6 +1,6 @@
 <template>
   <div class="destination-list">
-    <p  v-if="isResult === false">검색 결과가 없습니다.</p>
+    <p v-if="isResult === false" class="no-result" >검색 결과가 없습니다.</p>
     <ul v-if="isResult === true">
       <li v-for="list in destinationList">
         <strong> {{ list.title }} </strong>
@@ -55,6 +55,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .destination-list ul {width:80%; margin:50px auto;}
+  .destination-list .no-result {padding-top:20px; font-size:12px; color:#999;}
+  .destination-list ul {width:80%; margin:50px auto; background-color:rgba(255,255,255,0.7);}
   .destination-list ul li {list-style:none; text-align:left; padding-top:20px; border-bottom:1px solid #ddd; }
 </style>
