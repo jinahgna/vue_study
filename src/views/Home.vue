@@ -21,3 +21,7 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+  .home {padding-top:100px;}
+</style>

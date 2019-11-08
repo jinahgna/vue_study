@@ -17,6 +17,7 @@ export default {
   name: 'destinationList',
   data () {
       return {
+          serviceKey: 'QBK%2FlSyT0QTA%2F9qIlwhVlxwr%2FGep9McM%2B5c2y5DdJE4RuhiylG9vaYGiYIqz%2F4UamfDAYURZ84JjA%2FlIq6spwA%3D%3D',
           destinationList: [],
           isResult: false
       }
@@ -27,14 +28,12 @@ export default {
     created () {
         const self = this;
         eventBus.$on('keyword', function (data) {
-            const serviceKey = 'QBK%2FlSyT0QTA%2F9qIlwhVlxwr%2FGep9McM%2B5c2y5DdJE4RuhiylG9vaYGiYIqz%2F4UamfDAYURZ84JjA%2FlIq6spwA%3D%3D';
             const mobileApp = 'vue_study';
             const numOfRows = '100';
             const contentTypeId = '12';
             const keyword = data;
 
-            console.log('받음', keyword);
-            axios.get('http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchKeyword?serviceKey=' + serviceKey +
+            axios.get('http://api.visitkorea.or.kr/openapi/service/rest/KorService/searchKeyword?serviceKey=' + self.serviceKey +
                 '&MobileApp='+mobileApp+
                 '&MobileOS=ETC&pageNo=1&numOfRows='+numOfRows+
                 '&listYN=Y&arrange=A&contentTypeId='+contentTypeId+
@@ -56,5 +55,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .destination-list ul {width:80%; margin:50px auto;}
+  .destination-list ul li {list-style:none; text-align:left; padding-top:20px; border-bottom:1px solid #ddd; }
 </style>
