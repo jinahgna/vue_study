@@ -23,5 +23,5 @@ export default {
 </script>
 
 <style scoped>
-  .home {padding-top:100px; width:100%;}
+  .home {padding-top:100px; width:100%; }
 </style>
